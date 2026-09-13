@@ -270,11 +270,25 @@ a:hover {
     margin-bottom: 8px;
 }
 
-.back-link-container {
+/* Comments Section (Giscus) */
+.comments-section {
     margin-top: 60px;
-    margin-bottom: 40px;
-    border-top: 1px solid var(--border);
     padding-top: 40px;
+    border-top: 1px solid var(--border);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.comments-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.back-link-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 .back-link {
