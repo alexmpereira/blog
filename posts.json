@@ -1,8 +1,8 @@
 [
     {
-        "id": "hello-world",
-        "title": "Minha Primeira Pesquisa",
+        "id": "analise-comparativa-de-complexidade-ciclomatica-e-cognitiva-em-arquitetura-web",
+        "title": "Análise Comparativa de Complexidade Ciclomática e Cognitiva em Arquiteturas Web: HTMX vs React",
         "date": "2026-09-13",
-        "summary": "Neste post inicial, testo as funcionalidades do blog e mostro como ele funciona, com foco em facilidade de uso e design premium."
+        "summary": "Estudo sobre a eficácia da biblioteca HTMX em comparação ao React, focando na redução da sobrecarga cognitiva e instrumental associada à gestão de estado no cliente."
     }
 ]
