@@ -76,17 +76,6 @@ async function loadSinglePost() {
         
         const markdown = await mdResponse.text();
         
-        // Setup marked options for syntax highlighting
-        if (window.marked && window.hljs) {
-            marked.setOptions({
-                highlight: function(code, lang) {
-                    const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-                    return hljs.highlight(code, { language }).value;
-                },
-                langPrefix: 'hljs language-'
-            });
-        }
-        
         // Parse markdown and sanitize
         const rawHtml = marked.parse(markdown);
         const cleanHtml = DOMPurify.sanitize(rawHtml);
@@ -101,6 +90,12 @@ async function loadSinglePost() {
         
         html += cleanHtml;
         postContent.innerHTML = html;
+        
+        if (window.hljs) {
+            postContent.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        }
         
     } catch (error) {
         postContent.innerHTML = `<h1>Erro ao carregar</h1><p>${error.message}</p>`;
